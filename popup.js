@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const publishedDaysAgo = parseInt(article.querySelector('._taxonomy-item__time_al3wh_37.col-lg-1.col-sm-12').textContent);
         const publicationDate = new Date(today);
         publicationDate.setDate(today.getDate() - publishedDaysAgo); // Sottrai giorni dalla data corrente
-        const content = article.querySelector('._taxonomy-item__content_al3wh_53.col-lg-7.col-8').textContent;
-        const paragraphs = Array.from(article.querySelectorAll('._article-paragraph_e98aq_1')).map(p => p.textContent).join('\n');
-        return { title, date: publicationDate, content, paragraphs };
+        const contentElement = article.querySelector('._taxonomy-item__content_al3wh_53.col-lg-7.col-8');
+        const paragraphs = Array.from(contentElement.querySelectorAll('._article-paragraph_e98aq_1')).map(p => p.textContent).join('\n');
+        const articleUrl = article.querySelector('._taxonomy-item_al3wh_1._opener_al3wh_14 a').getAttribute('href'); // URL dell'articolo completo
+        return { title, date: publicationDate, paragraphs, articleUrl };
       });
 
       // Ordina le notizie per data
@@ -30,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const contentCell = document.createElement('td');
 
         dateCell.textContent = item.date.toLocaleDateString();
-        contentCell.innerHTML = `<b>${item.title}</b><br>${item.paragraphs}`;
+
+        // Aggiungi il titolo con paragrafi
+        contentCell.innerHTML = `<b>${item.title}</b><br>${item.paragraphs}<br><a href="${item.articleUrl}" target="_blank">Vai alla notizia</a>`;
 
         row.appendChild(dateCell);
         row.appendChild(contentCell);
