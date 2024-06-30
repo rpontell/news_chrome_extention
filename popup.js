@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('https://ilpost-proxy-be7f54fcfe74.herokuapp.com/politica')
+  fetch('https://estensione-chrome.fly.dev/politica')
     .then(response => response.text())
     .then(data => {
       const parser = new DOMParser();
