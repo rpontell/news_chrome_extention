@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('https://news-chrome-extentiom.fly.dev/politica/gazzetta/');
     const fetchPromises = [];
   
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i < 10; i++) {
       const fetchPromise = fetch(`https://news-chrome-extentiom.fly.dev/politica/gazzetta/${i}`)
         .then(response => response.text())
         .then(data => {
