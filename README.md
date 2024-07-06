@@ -1,7 +1,7 @@
-# Chrome Extension Description: ilpost.it Political News Reader
+# Chrome Extension Description: Notizie di Politica
 
 ## Overview
-Stay informed about the latest political news from Italy with the **Notizie di Politica Il Post** Chrome extension. This extension provides quick access to the most recent articles and updates from ilpost.it's political section directly in your browser.
+Stay informed about the latest political news from Italy with the **Notizie di Politica** Chrome extension. This extension provides quick access to the most recent articles and updates from ilpost.it's political section directly in your browser.
 
 ## Features
 - **Latest News Updates**: Receive real-time updates on political developments in Italy.
@@ -9,8 +9,8 @@ Stay informed about the latest political news from Italy with the **Notizie di P
 - **Efficient Reading**: Enjoy a clean and user-friendly interface designed for seamless reading.
 
 ## How It Works
-1. **Install the Extension**: Add the ilpost.it Political News Reader extension to your Chrome browser.
-2. **Stay Updated**: Instantly access the latest political news from ilpost.it right from your browser toolbar.
+1. **Install the Extension**: Add the extension to your Chrome browser.
+2. **Stay Updated**: Instantly access the latest political news from ilpost.it, ansa.it and gazzettaufficiale.it right from your browser toolbar.
 3. **Read and Explore**: Dive into detailed articles and stay informed about the political landscape in Italy effortlessly.
 
 ## Why Use It

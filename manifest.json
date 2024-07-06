@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Notizie di Politica Il Post",
-    "version": "1.1",
-    "description": "Estensione Chrome per visualizzare le notizie di politica del sito Il Post.",
+    "name": "Notizie di Politica",
+    "version": "2.0",
+    "description": "Estensione Chrome per visualizzare le notizie di politica dai siti ilpost.it, ansa.it e gazzettaufficiale.it",
     "permissions": [
       "activeTab"
     ],
