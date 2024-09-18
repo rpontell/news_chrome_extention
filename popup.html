@@ -39,21 +39,29 @@
     /* Padding extra per evitare che il banner copra i bottoni */
     body {
       padding-bottom: 60px; /* Altezza del banner più un po' di margine */
-      overflow: auto;  /*Mantiene la barra di scorrimento laterale sempre visibile */
+      min-height: 610px;
+      overflow-y: scroll;  /*Mantiene la barra di scorrimento laterale sempre visibile */
       background-color: #ded9ce;
     }
     /* Larghezza minima per le celle della tabella */
     th, td {
-      min-width: 100px;
+      min-width: 80px;  /* Set to 100px for both columns */
+      text-align: left; /* Align text to the left */
     }
     table {
       background-color: #f8f9fa;
     }
-    /* Larghezza massima per la colonna "Notizia" */
-    th:nth-child(2), td:nth-child(2) {
-      width: calc(100% - 100px);
+    /* Set equal width for "Data" and "Notizia" columns */
+    th:nth-child(1), td:nth-child(1) {
+      width: 50px; /* Equal width for both columns */
     }
-
+    th:nth-child(2), td:nth-child(2) {
+      width: calc(100% - 50px); /* Takes remaining space */
+    }
+    /* New class for smaller font size in date column */
+    .date-cell {
+      font-size: 12px;/* Smaller font size for date */
+    }
     .sticky-top {
       position: sticky;
       border-top: 16px solid #ded9ce;
@@ -61,6 +69,11 @@
       margin-bottom: -17px;  
       background-color: #ded9ce;
     }
+    #headTabletitle {
+      opacity: 0; /* Inizialmente invisibile */
+      transition: opacity 2s ease; /* Transizione graduale di 0.5 secondi */
+    }
+
   </style>
 </head>
 <body>
@@ -72,10 +85,10 @@
         <button id="ansaButton" class="btn btn-custom">Ansa</button>
         <button id="gazzettaButton" class="btn btn-custom">Gazzetta Ufficiale</button>
       </div>
-      <table id="headTable" class="table table-bordered mt-3" style="border-bottom: #000000 1px solid;">
+      <table id="headTabletitle" class="table table-bordered mt-3" style="border-bottom: #000000 1px solid;">
         <thead>
           <tr>
-            <th style="width:100px;">Data</th>
+            <th class="date-cell" style="font-size: 16px;">Data</th> <!-- Updated width -->
             <th>Notizia</th>
           </tr>
         </thead>
@@ -89,7 +102,7 @@
   <div class="fixed-bottom text-center p-2 border-top">
     <p>
       Have suggestions or encountered an issue? Click 
-      <a href="https://github.com/rpontell/news_chrome_extention" target="_blank">here</a> to visit my GitHub repository.
+      <a href="https://github.com/rpontell/news_chrome_extentiom" target="_blank">here</a> to visit my GitHub repository.
     </p>
   </div>
   <script src="popup.js"></script>
