@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('headTable').style.display = 'none';
 
   function showHeadTableTitle() {
+    document.getElementById('intro-text').style.display = 'none';
     const headTableTitle = document.getElementById('headTabletitle');
     headTableTitle.style.opacity = '1'; // Rende visibile l'elemento con una transizione
   }
